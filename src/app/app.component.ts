@@ -25,7 +25,7 @@ export class AppComponent {
   checkWeather(){
     this.dcity=this.city;
 
-    fetch(`http://api.weatherapi.com/v1/current.json?key=412b492bf8de4497ae193119252801&q=${this.dcity}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=412b492bf8de4497ae193119252801&q=${this.dcity}`)
     .then((response)=> response.json())
 
     .then((data)=>{
