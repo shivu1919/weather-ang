@@ -1,0 +1,13 @@
+<div class="main">
+    <div class="weather">
+        <h1>{{title |titlecase}} App</h1>
+        <input placeholder="enter your city name"  (input) = "setCity($event)">
+        <button (click)="checkWeather()">Check Weather</button>
+
+        <h3>{{dcity}}</h3>
+        <img src={{image}}>
+        <h3>{{temp_c}}</h3>
+        <h3>{{wind}}</h3>
+        <h3>{{humidity}}</h3>
+    </div>
+</div>

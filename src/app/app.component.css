@@ -1,0 +1,43 @@
+.main{
+    width:100vw;
+    height: 100vh;
+    background-color: coral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+    width:450px;
+    height:450px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+input{
+    height: 45px;
+    width:300px;
+    background-color: lavender;
+    font-size: 22px;
+    padding-left: 15px;
+    color: black;
+    border: none;
+    border-radius: 15px;
+}
+
+button{
+    height: 45px;
+    cursor: pointer;
+    width:170px;
+    font-size: 22px;
+    background-color: lavender;
+    color: navy;
+    border: none;
+    border-radius: 12px;
+}
