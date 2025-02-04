@@ -1,24 +1,23 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 
 @Injectable({
-  providedIn: 'root'
+    providedIn:'root'
 })
-export class WeatherService {
+export class WeatherService{
 
-  temp_c:string=''
-  constructor() { }
 
-  checkWeather(city:string){
-  
-    fetch(`http://api.weatherapi.com/v1/current.json?key=412b492bf8de4497ae193119252801&q=${city}`)
-    .then((response)=> response.json())
+    private apikey = 'Your-API-KEY'
+    private apiurl = 'http://api.weatherapi.com/v1/current.json'
+    constructor(){}
 
-    .then((data)=>{
-      console.log(data)
-      this.temp_c= "Temperature: " + data.current.temp_c;
+    fetchWeather(city:string): Promise<any>{
+        return fetch(`${this.apiurl}?key=${this.apikey}&q=${city}`)
+        .then(response=>{
+            return response.json()
+        })
+        .then(data => data.current)
+    }
 
-    })
-
-    
-  }
-}
+} 
